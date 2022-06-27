@@ -18,44 +18,61 @@
 
 // Vue
 
-var app = new Vue (
+var app = new Vue(
     {
         el: '#root',
         data: {
             newToDoText: '',
-            todo: [
+            todos: [
         
         {
-            toDoText: 'andare al mare',
+            text: 'andare al mare',
             done: true,
         },
 
         {
-            toDoText:'andare in vacanza',
+            text:'andare in vacanza',
             done: false,
         },
 
         {
-            toDoText:' mettere la crema solare',
+            text:' mettere la crema solare',
             done: false,
         },
 
-       {    toDoText:' scattare una foto alla sabbia',
+       {    text:' scattare una foto alla sabbia',
             done: false,
         },
 
         {
-            toDoText:"tuffarsi dall' alto",
+            text:"tuffarsi dall' alto",
             done:true,
         },
 
         {
-            toDoText:" camminare in riva al mare",
+            text:" camminare in riva al mare",
             done: true,
         },
-    ]},
+    ]
+},
         methods:{
+            removeToDo(index) {
+                this.todo.splice(index,1);
+            },
+            
+            addNewToDoText() {
+                if(this.newToDoText.length > 0) {
+                    const newTodo = {
+                        text: this.newToDoText,
+                        done: false,
+                    }
+                    this.todos.push(newTodo);
+                }
+            },
+
+            }
 
     }
+
     
     );
