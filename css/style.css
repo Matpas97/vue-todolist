@@ -32,3 +32,15 @@
     border-radius: 10px;
     margin-top: 45px;
  }
+
+ .list {
+    display: flex;
+ }
+
+ .list span {
+    justify-content: space-between;
+ }
+
+.over-list {
+    border-bottom: 1px solid black;
+}
