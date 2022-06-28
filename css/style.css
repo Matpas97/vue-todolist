@@ -44,3 +44,19 @@
 .over-list {
     border-bottom: 1px solid black;
 }
+.over-list {
+   list-style-type: none;
+
+}
+
+.over-list .todo {
+   border-bottom: 1px solid black;
+   padding: 10px;
+   font-size: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.over-list .todo .done {
+   text-decoration: line-through;
+}

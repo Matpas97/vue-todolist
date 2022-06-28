@@ -18,21 +18,25 @@
 
         <div class="bottom-container">
             <!-- Template Todo List-->
-           <ul class="over-list"> 
-            <li v-for="(todo, index) in todos" class="todo" :class="{'line-through': todo.done}">
-                {{ todo.text }}
+           <ul  v-if="todos.length > 0" class="over-list"> 
+            <li v-for="todo, index in todos" class="todo" :class="{'line-through': todo.done}">
+                <span @click="toggleDone(index)" :class="{'done' : todo.done}"> {{ todo.text }}</span>
+                
+                <div class="actions">
+                    <span @click="removeTodo(index)">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                </div>
                 
                 
 
                 <li class="over-list">
-                    <span>
-                        <i @click="removeToDo(index)" fa-solid fa-xmark "></i>
-                    </span>
+                   
                 </li>
 
                 </div>
 
-                <li><i class="fa-solid fa-xmark"></i></li>
+                <li></li>
 
                 <li></li>
             </ul>

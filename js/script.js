@@ -56,8 +56,8 @@ var app = new Vue(
     ]
 },
         methods:{
-            removeToDo(index) {
-                this.todo.splice(index,1);
+            removeToDo(todoindex) {
+                this.todo.splice(todoindex,1);
             },
             
             addNewToDoText() {
@@ -67,6 +67,8 @@ var app = new Vue(
                         done: false,
                     }
                     this.todos.push(newTodo);
+                    // svuoto la input
+                    this.newToDoText = '';
                 }
             },
 
