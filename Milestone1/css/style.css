@@ -1,0 +1,61 @@
+/* RESET */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* BODY */
+.main-container {
+   text-align: center;
+   padding-top: 30px;
+}
+
+.main-container input {
+   padding: 10px 50px;
+   border-radius: 10px;
+}
+
+.main-container button {
+   padding: 10px 30px;
+   border-radius: 10px;
+   cursor: pointer;
+
+}
+
+.bottom-container {
+   margin: auto;
+   width: 90%;
+   background-color:#d2d2d2 ;
+   height: 250px;
+   border-radius: 10px;
+   margin-top: 45px;
+}
+
+.list {
+   display: flex;
+}
+
+.list span {
+   justify-content: space-between;
+}
+
+.over-list {
+   border-bottom: 1px solid black;
+}
+.over-list {
+  list-style-type: none;
+
+}
+
+.over-list .todo {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.over-list .todo .done {
+  text-decoration: line-through;
+}
